@@ -1,5 +1,6 @@
 package com.example.intents
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -12,10 +13,10 @@ class PhotoActivity : AppCompatActivity() {
 
         var btnLaunchMain : Button = findViewById(R.id.btnBack)
 
-        btnLaunchMain.setOnClickListener(
+        btnLaunchMain.setOnClickListener{
             //Explicit intent
             // Move to another SPECIFIC APP replace package name with yours
-            var packageName = "com.example.intents"
+            var packageName = "com.example.android"
 
             var launchApp: Intent? = packageManager.getLaunchIntentForPackage(packageName)
 
@@ -26,7 +27,7 @@ class PhotoActivity : AppCompatActivity() {
                 Toast.makeText(this, "APP NOT FOUND!", Toast.LENGTH_LONG).show()
             }
 
-        )
+        }
 
     }
 }
