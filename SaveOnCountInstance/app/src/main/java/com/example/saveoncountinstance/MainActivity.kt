@@ -12,6 +12,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        if(savedInstanceState != null) {
+            incrementNumber = savedInstanceState.getInt("SavedVar_KEY")
+        }
+
+
     }
 
     fun incrementValue(view: View) {
@@ -29,4 +34,15 @@ class MainActivity : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.show_count)
         textView.text = incrementNumber.toString()
     }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        val userNumber = incrementNumber
+        outState.putString("savedInt", incrementNumber.toString())
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        val userInt = savedInstanceState.getString("savedInt", "" )
+    }
+
 }
