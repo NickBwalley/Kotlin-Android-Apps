@@ -7,6 +7,7 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.lang.reflect.Array.getInt
 
 class MainActivity : AppCompatActivity() {
     var orderMessage = ""
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         // When the donut image is clicked
         donut.setOnClickListener{
             // fetch message from string.xml using getString() method
-            orderMessage = getString(R.string.donut_order_message)
+            orderMessage = getInt(R.integer.donut_order_message)
             displayToast(orderMessage)
         }
 

@@ -5,12 +5,12 @@
     <string name="donuts">Donuts are glazed and sprinkled with candy.</string>
     <string name="froyo">FroYo is premium self-serve frozen yogurt.</string>
 
-    <string name="donut_order_message">You ordered a donut</string>
-    <string name="ice_cream_order_message">You ordered an ice cream sandwich</string>
-    <string name="froyo_order_message">You ordered a Froyo</string>
+    <integer name="donut_order_message">50</integer>
+    <integer name="ice_cream_order_message">150</integer>
+    <integer name="froyo_order_message">200</integer>
 
-    <string name="same_day_delivery">Same day delivery</string>
-    <string name="next_day_delivery">Next day delivery</string>
-    <string name="pick_up">Self Pick up</string>
+    <integer name="same_day_delivery">300</integer>
+    <integer name="next_day_delivery">100</integer>
+    <integer name="pick_up">0</integer>
 
 </resources>
